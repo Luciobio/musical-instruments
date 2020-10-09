@@ -1,0 +1,40 @@
+.App {
+  margin-top: 5%;
+  text-align: center;
+  color: white;
+  font-family: 'Lobster', cursive;
+}
+
+.btn {
+  margin: 2%
+}
+
+.btn-danger {
+  font-size: 150%
+}
+
+.instrumentTitle {
+  color: #cd6E1B;
+  padding: 5%
+}
+
+.image {
+  size: 100%
+}
+
+.instrumentCard {
+  background-color: white;
+  width: 300px;
+  margin: auto;
+  border-radius: 10%;
+}
+
+.buttonCont {
+  padding: 3%
+}
+
+.infoCont {
+  margin: 2%
+}
+
+
