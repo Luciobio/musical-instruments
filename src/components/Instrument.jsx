@@ -1,9 +1,7 @@
 import React from 'react';
 import {Howl, Howler} from "howler";
 
-
-const Instrument = ({instrument}) => {
-    
+const Instrument = ({instrument}) => {;
     const {name, picture, sound} = instrument;
     
     const soundPlay = (src) => {
@@ -23,8 +21,8 @@ const Instrument = ({instrument}) => {
                 <img className="image" src={picture} alt={name}/>
                 <br/>
                 <div className ="buttonCont">
-                    <button type="button" class="btn btn-outline-warning" onClick={ () => soundPlay(sound) }>Escuchar</button>
-                    <button type="button" class="btn btn-outline-danger" onClick={() => Howler.stop()}>Detener</button>
+                    <button type="button" className="btn btn-outline-warning" onClick={ () => soundPlay(sound) }>Escuchar</button>
+                    <button type="button" className="btn btn-outline-danger" onClick={() => Howler.stop()}>Detener</button>
                 </div>
             </div>
         </div>
