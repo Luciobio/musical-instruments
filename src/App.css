@@ -29,6 +29,11 @@
   border-radius: 10%;
 }
 
+.startMsg{
+  color: #c82333;
+  padding: 4%
+}
+
 .buttonCont {
   padding: 3%
 }
@@ -37,4 +42,26 @@
   margin: 2%
 }
 
+.List {
+  padding-top: 2%
+}
 
+.table {
+  color:black;
+  background-color: white;
+  max-width: 300px;
+  margin:auto;
+}
+
+.borderless td, .borderless th {
+  border: none;
+}
+
+.listImg {
+  max-width: 50%;
+}
+
+tr {
+  display: flex;
+  align-items: baseline;
+}

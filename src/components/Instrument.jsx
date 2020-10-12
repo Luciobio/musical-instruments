@@ -12,18 +12,24 @@ const Instrument = ({instrument}) => {;
         sound.play();
     }
 
+    const showButtons = instrument.name === "Instrumentos" ? (
+        <h5 className="startMsg">¡Toca "Obtener uno" para comenzar!</h5> 
+    ) : (
+        <div className ="buttonCont">
+            <button type="button" className="btn btn-outline-warning" onClick={ () => soundPlay(sound) }>Escuchar</button>
+            <button type="button" className="btn btn-outline-danger" onClick={() => Howler.stop()}>Detener</button>
+        </div>
+    );
+
     return (
         <div>
             <div className="instrumentCard">
                 <div className = "instrumentTitle">
-                    <h2>{name}</h2>
+                    <h3>{name}</h3>
                 </div>
                 <img className="image" src={picture} alt={name}/>
                 <br/>
-                <div className ="buttonCont">
-                    <button type="button" className="btn btn-outline-warning" onClick={ () => soundPlay(sound) }>Escuchar</button>
-                    <button type="button" className="btn btn-outline-danger" onClick={() => Howler.stop()}>Detener</button>
-                </div>
+                {showButtons}
             </div>
         </div>
     )

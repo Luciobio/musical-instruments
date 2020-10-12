@@ -24,22 +24,13 @@ const instrumentArray = [
   {id:17, name: 'Voz', picture:"/images/voice.jpg", sound:"/sounds/voice.mp3"}
 ];
 
-const firstCard = {id:0, name: '', picture:"/images/instruments.jpg", sound:""};
+const firstCard = {id:0, name: 'Instrumentos', picture:"/images/instruments.jpg", sound:"/sounds/instruments.mp3"};
 
 function App() {
   const [instrument, setInstrument] = useState(firstCard);
   const [instruments, setInstruments] = useState(instrumentArray);
   const [list, setList] = useState([]);
   const [max, setMax] = useState (17);
-  
-  const showInstrument = instruments.length ? (
-    <Instrument instrument={instrument}/>
-  ) : (
-    <div>
-      <p>No quedan más Instrumentos!</p>
-      <button type="button" className="btn btn-danger" onClick={resetGame}>Volver a empezar</button>
-    </div>
-  );
 
   const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -64,16 +55,35 @@ function App() {
     setInstrument(firstCard);
     setInstruments(instrumentArray);
     setList([]);
+    setMax(17);
   }
+
+  const showInstrument = instruments.length ? (
+    <div>
+      <button type="button" className="btn btn-danger" onClick={getInstrument}>Obtener uno</button>
+      <Instrument instrument={instrument}/>
+    </div>
+  ) : (
+    <div>
+      <p>No quedan más Instrumentos!</p>
+      <button type="button" className="btn btn-danger" onClick={resetGame}>Volver a empezar</button>
+    </div>
+  );
+
+  const showStartAgain = list.length ? (
+    <button type="button" className="btn btn-danger" onClick={resetGame}>Volver a empezar</button>
+  ) : (
+    <p></p>
+  );
 
   return (
     <div className="App" >
       <h1 className="Title">¡Bingo de los instrumentos!</h1>
-      <button type="button" className="btn btn-danger" onClick={getInstrument}>Obtener uno</button>
       <div>
         {showInstrument}
       </div>
       <List list={list}/>
+      {showStartAgain}
       <div className="infoCont">
         <h6>© Prof. Luciano Pardo</h6>
         <h6>Colegio Américo Vespucio</h6>
