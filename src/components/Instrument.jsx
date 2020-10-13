@@ -16,7 +16,7 @@ const Instrument = ({instrument}) => {;
         <h5 className="startMsg">¡Toca "Obtener uno" para comenzar!</h5> 
     ) : (
         <div className ="buttonCont">
-            <button type="button" className="btn btn-outline-warning" onClick={ () => soundPlay(sound) }>Escuchar</button>
+            <button type="button" className="btn btn-outline-success" onClick={ () => soundPlay(sound) }>Escuchar</button>
             <button type="button" className="btn btn-outline-danger" onClick={() => Howler.stop()}>Detener</button>
         </div>
     );

@@ -82,13 +82,11 @@ function App() {
     <div className="App" >
       <Cards modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
       <h1 className="Title">¡Bingo de los instrumentos!</h1>
-      <div>
-        {showInstrument}
-      </div>
+      {showInstrument}
       <List list={list}/>
       {showStartAgain}
       <br/>
-      <button type="button "className="btn btn-success" onClick={ () => setModalIsOpen(true) }>Descargá los cartones aquí</button>
+      <button type="button "className="btn btn-success" onClick={ () => setModalIsOpen(true) }>Descarga los cartones aquí</button>
       <div className="infoCont">
         <h6>© Prof. Luciano Pardo</h6>
         <h6>Colegio Américo Vespucio</h6>

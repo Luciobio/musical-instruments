@@ -11,7 +11,7 @@ const Cards = ({modalIsOpen, setModalIsOpen}) => {
                 {
                     content: {
                         color: '#cd6E1B',
-                        height: '350px',
+                        height: '370px',
                         width: '300px',
                         margin: 'auto',
                         borderRadius: '20px',

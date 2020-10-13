@@ -2,14 +2,14 @@
   margin-top: 3%;
   text-align: center;
   color: white;
-  font-family: 'Lobster', cursive;
 }
 
-.ReactModal {
-  background-color: white;
-  width: 300px;
-  margin: auto;
-  border-radius: 10%;
+.btn-danger {
+  border-color: white
+}
+
+button:focus {
+  outline: none
 }
 
 .btn {
