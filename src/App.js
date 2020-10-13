@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Instrument from './components/Instrument';
 import List from './components/List';
+import Cards from './components/Cards';
 
 const instrumentArray = [
   {id:0, name: 'Guitarra', picture:"/images/a-guitar.jpg", sound:"/sounds/a-guitar.mp3"},
@@ -31,6 +32,7 @@ function App() {
   const [instruments, setInstruments] = useState(instrumentArray);
   const [list, setList] = useState([]);
   const [max, setMax] = useState (17);
+  const [modalIsOpen, setModalIsOpen] = useState(false)
 
   const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -78,12 +80,14 @@ function App() {
 
   return (
     <div className="App" >
+      <Cards modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
       <h1 className="Title">¡Bingo de los instrumentos!</h1>
       <div>
         {showInstrument}
       </div>
       <List list={list}/>
       {showStartAgain}
+      <button type="button "className="btn btn-success" onClick={ () => setModalIsOpen(true) }>Descargá los cartones aquí</button>
       <div className="infoCont">
         <h6>© Prof. Luciano Pardo</h6>
         <h6>Colegio Américo Vespucio</h6>
